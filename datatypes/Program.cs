@@ -1,4 +1,6 @@
 ﻿// ------------ Value Data Types ------------ //
+int? m = null;
+Console.WriteLine(m);
 
 int a = 5;
 int b = a + 2;
