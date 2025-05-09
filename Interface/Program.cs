@@ -2,6 +2,9 @@
     double Area(int l, int b);
     double Perimeter(int l, int b);
     void Display();
+    void Display2(){
+        Console.WriteLine("Interface 2 ...");
+    }
 }
 
 class Rectangle : IShape{
