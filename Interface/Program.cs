@@ -43,5 +43,9 @@ class Program{
 
         IShape interfaceObj = new Circle();
         interfaceObj.Display();
+
+        Rectangle2 rectangle2 = new Rectangle2(5,10,"blue");
+        Console.WriteLine("Area of rectangle is {0}", rectangle2.getArea());
+        Console.WriteLine("Color of rectangle is {0}", rectangle2.GetColor());
     }
 }

@@ -1,5 +1,10 @@
-﻿abstract class Animal{
+﻿using System.Runtime;
+
+abstract class Animal{
     public abstract void animalSound();
+    // public abstract void numberOfAnimals(){
+    //     Console.WriteLine("Abstract class cannot contain body !!");
+    // }
     public void sleep(){
         Console.WriteLine("Zzzzzzz....");
     }

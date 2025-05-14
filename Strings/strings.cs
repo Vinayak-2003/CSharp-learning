@@ -132,3 +132,5 @@ Console.WriteLine(answer.GetType());
 string corrected = answer.ToString();
 Console.WriteLine(corrected.GetType());
 Console.WriteLine(corrected);
+
+Console.ReadLine();
