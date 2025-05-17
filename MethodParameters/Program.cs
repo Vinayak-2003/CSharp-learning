@@ -29,6 +29,11 @@ class MethodParameters(){
         return res;
     }
 
+    public static void RefMethod(ref int refArgument){
+        refArgument += 45;
+        Console.WriteLine(refArgument);
+    }
+
 
     static public void Main(){
         AddStrNamedParams(s1: "Geeks", s3: "Geeks", s2: "for");
@@ -43,6 +48,9 @@ class MethodParameters(){
 
         int nums = MulVal(20,34,12,25);
         Console.WriteLine($"value is {nums}");
+
+        int number = 23;
+        RefMethod(ref number);
     }    
 }
 
