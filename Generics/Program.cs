@@ -33,23 +33,28 @@ public class GenericLinkedList<L>{
     }
 }
 
-public class ClsEqual{
-    public static bool AreEqual<T>(T val1, T val2){
+public class ClsEqual
+{
+    public static bool AreEqual<T>(T val1, T val2)
+    {
         return val1.Equals(val2);
     }
 }
 
 
 // generic as class-type
-class MyGenericClass<T>{
+class MyGenericClass<T>
+{
     // generic as field data-type
     private T? GenericMemebrValue;
     // generic as class parameter 
-    public MyGenericClass(T value){
+    public MyGenericClass(T value)
+    {
         GenericMemebrValue = value;
     }
     // 
-    public T GenericMethod(T GenericParam){
+    public T GenericMethod(T GenericParam)
+    {
         Console.WriteLine($"Parameter type {typeof(T).ToString()}, Value: {GenericParam}");
         Console.WriteLine($"Return type {typeof(T).ToString()}, Value: {GenericMemebrValue}");
         return GenericMemebrValue;
@@ -59,7 +64,8 @@ class MyGenericClass<T>{
 
 
 class Program{
-    private static void Main(){
+    private static void Main()
+    {
         GenericList<int> integerList = new GenericList<int>();
         integerList.Add(1);
 
@@ -70,15 +76,18 @@ class Program{
         exampleClass.Add(new ExampleClass());
 
         GenericLinkedList<int> genericLinkedList = new();
-        for (int x=10;x<10;x++){
+        for (int x = 10; x < 10; x++)
+        {
             genericLinkedList.AddHead(x);
         }
 
         bool IsEqual = ClsEqual.AreEqual<double>(10.5, 10.5);
-        if (IsEqual){
+        if (IsEqual)
+        {
             Console.WriteLine("values are equal");
         }
-        else{
+        else
+        {
             Console.WriteLine("values are not equal");
         }
 
@@ -87,5 +96,14 @@ class Program{
         Console.WriteLine(val);
 
         ListImplementation.ListOps();
+
+        MultipleTypeGeneric<string, int> multiGeneric = new MultipleTypeGeneric<string, int>();
+        multiGeneric.Message = "Hello world!!";
+        multiGeneric.MultiGenericMethod("Vinayak", 43);
+
+        RestrictGeneric<bool> restrictedGeneric = new RestrictGeneric<bool>();
+        int num = 23;
+        bool condition = true;
+        restrictedGeneric.IntFloatMethod(condition);
     }
 }

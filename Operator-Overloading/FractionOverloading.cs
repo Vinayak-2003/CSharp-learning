@@ -29,9 +29,11 @@ public readonly struct Fraction
         return a;
     }
 
+    // Unary operator overloading
     public static Fraction operator +(Fraction a) => a;
     public static Fraction operator -(Fraction a) => new Fraction(-a.num, a.den);
 
+    // Binary operator overloading
     public static Fraction operator +(Fraction a, Fraction b)
         => new Fraction(a.num * b.den + b.num * a.den, a.den * b.den);
 

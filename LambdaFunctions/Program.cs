@@ -1,17 +1,20 @@
 ﻿using Microsoft.VisualBasic;
 
-class LambdaFunction{
-    public Func<int, int> Square = x => x*x;
+class LambdaFunction
+{
+    public Func<int, int> Square = x => x * x;
 
     // implicit type
-    public Func<int, int, bool> EqualityTest = (x,y) => x == y;
-    
+    public Func<int, int, bool> EqualityTest = (x, y) => x == y;
+
     // explicit type
     public Func<int, string, bool> IsTooLong = (int x, string s) => s.Length > x;
 
-    public Func<IEnumerable<int>, int> Sum = values => {
+    public Func<IEnumerable<int>, int> Sum = values =>
+    {
         int sum = 0;
-        foreach (var value in values){
+        foreach (var value in values)
+        {
             sum += value;
         }
         return sum;
@@ -19,8 +22,13 @@ class LambdaFunction{
 
     // lambda function and tuples
     public Func<(int, int, int), (int, int, int)> DoubleLambda = nums => (
-        2*nums.Item1, 2*nums.Item2, 2*nums.Item3
+        2 * nums.Item1, 2 * nums.Item2, 2 * nums.Item3
     );
+    
+    Action name = () =>
+    {
+        Console.WriteLine("Vinayak");
+    };
 }
 
 class Program{
