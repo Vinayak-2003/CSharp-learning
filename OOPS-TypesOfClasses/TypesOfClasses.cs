@@ -1,12 +1,12 @@
 ﻿// --------------------- Abstract class --------------------- //
-abstract class abstractClass{
+abstract class AbstractClass{
     public void AbstractDisplay(){
         Console.WriteLine("this is an abstract class");
     }
 }
 
-class derivedAbstractClass : abstractClass{
-    public derivedAbstractClass(){
+class DerivedAbstractClass : AbstractClass{
+    public DerivedAbstractClass(){
         Console.WriteLine("this is a derived class for abstract class");
     }
 }
@@ -32,7 +32,7 @@ static class StaticClass{
 
 public class Program{
     static void Main(string[] args){
-        derivedAbstractClass abstractObj = new derivedAbstractClass();
+        DerivedAbstractClass abstractObj = new DerivedAbstractClass();
         abstractObj.AbstractDisplay();
 
         PartialClassA partialClassAObj = new PartialClassA("Vinayak", 3);

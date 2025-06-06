@@ -26,9 +26,17 @@ class MethodParameters(){
         num += 12;
     }
 
+    public static void AddTwoOutParams(out int p, out int q)
+    {
+        p = 30;
+        q = 40;
+        p += q;
+        q += p;
+    }
+
     // optional or default parameters
-    public static void DetailDefaultParams(string name, 
-                                            int age, 
+    public static void DetailDefaultParams(string name,
+                                            int age,
                                             string college = "MUJ",
                                             int year = 2025)
     {
@@ -74,6 +82,11 @@ class MethodParameters(){
         int num = 6;
         AddNumOutParam(out num);
         Console.WriteLine($"Modified value for num is {num}");
+
+        int i, j;
+        AddTwoOutParams(out i, out j);
+        Console.WriteLine($"Addition of two out params are: {i}");
+        Console.WriteLine($"Addition of two out params are: {j}");
 
         DetailDefaultParams("Vinayak Kanchan", 22);
 

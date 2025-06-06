@@ -57,7 +57,7 @@ class Program
 {
     public static void Main()
     {
-        // LINQueries.AggregateQuery();
+        LINQueries.AggregateQuery();
 
         // LINQueries.AllQuery();
 
@@ -171,6 +171,6 @@ class Program
 
         // LINQueries.WhereQuery();
         
-        LINQueries.ZipQuery();
+        // LINQueries.ZipQuery();
     }
 }
